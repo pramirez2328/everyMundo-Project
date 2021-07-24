@@ -9,9 +9,9 @@ function NavBar() {
           <img style={{ width: "270px" }} src={everymundo} alt="company logo" />
         </a>
 
-        <h1 className="me-5" style={{ fontSize: "4rem" }}>
+        <h1 className="me-5" style={{ fontSize: "3.5rem" }}>
           Every
-          <span style={{ color: "blue", fontFamily: "cursive" }}>Mundo</span>
+          <span style={{ color: "blue", fontFamily: "fantasy" }}>Mundo</span>
         </h1>
       </nav>
     </>
