@@ -13,6 +13,7 @@ function Countries(props) {
             <td>{currentCountry.symbol}</td>
             <td>
               <Link to="./show.jsx">
+                {currentCountry.contry}
                 <button type="button" className="btn btn-primary">
                   Show
                 </button>
