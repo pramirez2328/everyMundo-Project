@@ -1,5 +1,5 @@
 import React from "react";
-import everymundo from "./everymundo.png";
+import everymundo from "./images/everymundo.png";
 
 function NavBar() {
   return (
