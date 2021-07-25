@@ -9,6 +9,7 @@ const Main = () => {
     <Switch>
       <Route exact path="/" component={Home}></Route>
       <Route exact path="/show.jsx" component={Show}></Route>
+      {/* <Route exact path="/show.jsx/:id" render={ (props) => <Show country={this.state.obj}} />} </Route> */}
     </Switch>
   );
 };
