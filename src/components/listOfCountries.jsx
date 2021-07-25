@@ -1,6 +1,6 @@
 import React from "react";
 import Countries from "./countries";
-import { countries } from "./arrayOfCountries";
+import { countries } from "../arrayOfCountries";
 
 class ListOfCountries extends React.Component {
   constructor(props) {
@@ -29,6 +29,17 @@ class ListOfCountries extends React.Component {
     return (
       <div className="container">
         <table className="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Country</th>
+              <th scope="col">Currency</th>
+              <th scope="col">Code</th>
+              <th scope="col">symbol</th>
+              <th scope="col">Display</th>
+              <th scope="col">Update</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
           <Countries
             objOfCountries={this.state.obj}
             delete={this.handleDelete}

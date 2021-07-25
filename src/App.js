@@ -1,7 +1,7 @@
 import React from "react";
-import ListOfCountries from "./listOfCountries.jsx";
-import NavBar from "./NavBar.jsx";
-import Show from "./show.jsx";
+import ListOfCountries from "./components/listOfCountries.jsx";
+import NavBar from "./components/NavBar.jsx";
+import Show from "./components/show.jsx";
 
 class App extends React.Component {
   render() {

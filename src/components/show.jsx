@@ -1,8 +1,8 @@
 import React from "react";
-import americanAirlines from "./images/American.jpg";
-import unitedAirlines from "./images/United.jpg";
-import lufthansa from "./images/lufthansa.png";
-import emirates from "./images/Emirates-Symbol.png";
+import americanAirlines from "../images/American.jpg";
+import unitedAirlines from "../images/United.jpg";
+import lufthansa from "../images/lufthansa.png";
+import emirates from "../images/Emirates-Symbol.png";
 
 function Show() {
   return (
