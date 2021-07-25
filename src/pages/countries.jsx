@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Countries(props) {
   return (
@@ -12,11 +11,13 @@ function Countries(props) {
             <td>{currentCountry.code}</td>
             <td>{currentCountry.symbol}</td>
             <td>
-              <Link to="./show.jsx">
-                <button type="button" className="btn btn-primary">
-                  Show
-                </button>
-              </Link>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={() => props.format(currentCountry.country)}
+              >
+                Show
+              </button>
             </td>
             <td>
               <button type="button" className="btn btn-warning">
