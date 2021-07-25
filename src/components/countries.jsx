@@ -14,7 +14,9 @@ function Countries(props) {
               <button
                 type="button"
                 className="btn btn-primary"
-                onClick={() => props.format(currentCountry.country)}
+                onClick={() =>
+                  props.format(currentCountry.code, currentCountry.symbol)
+                }
               >
                 Show
               </button>

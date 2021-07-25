@@ -1,6 +1,6 @@
 import React from "react";
 import Countries from "./countries";
-import { countries } from "../arrayOfCountries";
+import { countries } from "../utilities/arrayOfCountries";
 
 class ListOfCountries extends React.Component {
   constructor(props) {
@@ -13,8 +13,10 @@ class ListOfCountries extends React.Component {
     this.handleFormat = this.handleFormat.bind(this);
   }
 
-  handleFormat(p) {
-    console.log(p);
+  handleFormat(code, symbol) {
+    let currencyTag = document.getElementsByClassName("currencyFormat");
+
+    for (let i = 0; i < currencyTag.length; i++) {}
   }
 
   handleDelete(id) {

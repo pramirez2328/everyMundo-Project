@@ -9,12 +9,15 @@ function NavBar() {
           <img style={{ width: "170px" }} src={everymundo} alt="company logo" />
         </a>
 
-        <h1 className="text-center mt-3 me-5">
-          Welcome to Every
+        <h1
+          className="text-center mt-3 me-5"
+          style={{ fontFamily: "Times-new-roman" }}
+        >
+          EVERY
           <span style={{ color: "blue", fontFamily: "fantasy" }}>
-            Mundo
+            MUNDO
           </span>{" "}
-          currency format
+          CURRENCY FORMAT
         </h1>
       </nav>
     </>
