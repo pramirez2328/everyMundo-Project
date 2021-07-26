@@ -25,7 +25,7 @@ function Show() {
                 <strong>
                   <span
                     className="currencyFormat"
-                    style={{ color: "blue", fontSize: "1rem" }}
+                    style={{ color: "blue", fontSize: "1.3rem" }}
                   >
                     $1234.56
                   </span>
@@ -55,7 +55,7 @@ function Show() {
                 <strong>
                   <span
                     className="currencyFormat"
-                    style={{ color: "blue", fontSize: "1.4rem" }}
+                    style={{ color: "blue", fontSize: "1.3rem" }}
                   >
                     $1234.56
                   </span>
@@ -87,7 +87,7 @@ function Show() {
                 <strong>
                   <span
                     className="currencyFormat"
-                    style={{ color: "blue", fontSize: "1.4rem" }}
+                    style={{ color: "blue", fontSize: "1.3rem" }}
                   >
                     $1234.56
                   </span>

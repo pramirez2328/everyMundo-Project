@@ -11,27 +11,25 @@ function Countries(props) {
             <td>{currentCountry.code}</td>
             <td>{currentCountry.symbol}</td>
             <td>
-<<<<<<< HEAD:src/components/countries.jsx
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={() =>
-                  props.format(currentCountry.code, currentCountry.symbol)
-                }
-              >
+              {currentCountry.contry}
+              <button type="button" className="btn btn-primary">
                 Show
               </button>
-=======
-              <Link to="./show.jsx">
-                {currentCountry.contry}
-                <button type="button" className="btn btn-primary">
-                  Show
-                </button>
-              </Link>
->>>>>>> main:src/pages/countries.jsx
             </td>
             <td>
-              <button type="button" className="btn btn-warning">
+              <button
+                type="button"
+                className="btn btn-warning"
+                onClick={() =>
+                  props.update(
+                    currentCountry.id,
+                    currentCountry.country,
+                    currentCountry.currency,
+                    currentCountry.code,
+                    currentCountry.symbol
+                  )
+                }
+              >
                 Update
               </button>
             </td>

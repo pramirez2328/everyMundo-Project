@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateNewCountry() {
+function CreateNewCountry(props) {
   return (
     <div className="mb-3 border p-3 border-secondary rounded sticky">
       <form>
@@ -37,7 +37,11 @@ function CreateNewCountry() {
             style={{ width: "17%" }}
             required
           />
-          <button type="button" className="btn btn-success">
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={() => props.create(props.objOfCountries)}
+          >
             ADD COUNTRY
           </button>
         </div>
