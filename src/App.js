@@ -7,13 +7,18 @@ class App extends React.Component {
     return (
       <div style={{ position: "relative" }}>
         <div
-          className="mt-5 me-5"
-          style={{ position: "sticky", top: "700px", float: "right" }}
+          style={{
+            position: "sticky",
+            top: "700px",
+            float: "right",
+            marginRight: "4rem",
+          }}
         >
           <a className="top-link hide" href="#top">
             <span>Back to top</span>
           </a>
         </div>
+
         <div className="container" id="container">
           <NavBar />
           <div className="sticky-top mb-3" style={{ backgroundColor: "white" }}>

@@ -12,14 +12,9 @@ class ListOfCountries extends React.Component {
     };
 
     this.handleDelete = this.handleDelete.bind(this);
-    this.handleFormat = this.handleFormat.bind(this);
     this.handleCreate = this.handleCreate.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleCustomize = this.handleCustomize.bind(this);
-  }
-
-  handleCustomize(usd, eur, cents, format) {
-    console.log(usd, eur, cents, format);
   }
 
   handleUpdate(id, country, currency, code, symbol) {
@@ -52,7 +47,7 @@ class ListOfCountries extends React.Component {
     newSymbol.value = "";
   }
 
-  handleFormat(code, symbol) {
+  handleCustomize(code, symbol) {
     let currencyTag = document.getElementsByClassName("currencyFormat");
 
     for (let i = 0; i < currencyTag.length; i++) {}
@@ -74,6 +69,8 @@ class ListOfCountries extends React.Component {
           create={this.handleCreate}
         />
         <Customize />
+
+        <hr />
         <div className="container">
           <table className="table table-striped table-hover">
             <thead>
@@ -82,17 +79,17 @@ class ListOfCountries extends React.Component {
                 <th scope="col">Currency</th>
                 <th scope="col">Code</th>
                 <th scope="col">Symbol</th>
-                <th scope="col">EUR Market</th>
-                <th scope="col">USD Market</th>
+                <th scope="col">Display</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
               </tr>
             </thead>
+
             <Countries
               objOfCountries={this.state.obj}
               delete={this.handleDelete}
-              format={this.handleFormat}
               update={this.handleUpdate}
+              customize={this.handleCustomize}
             />
           </table>
         </div>

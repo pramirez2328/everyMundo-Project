@@ -5,7 +5,7 @@ function CreateNewCountry(props) {
     <div className="mb-3 border p-3 border-secondary rounded sticky">
       <form>
         <div className="d-flex justify-content-between">
-          <h4>Create a new country</h4>
+          <h5 style={{ color: "blue" }}>Create a new country</h5>
           <input
             id="country"
             type="text"

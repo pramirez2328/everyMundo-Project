@@ -12,7 +12,13 @@ function Countries(props) {
             <td>{currentCountry.symbol}</td>
             <td>
               {currentCountry.contry}
-              <button type="button" className="btn btn-primary">
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={() =>
+                  props.customize(currentCountry.code, currentCountry.symbol)
+                }
+              >
                 SHOW
               </button>
             </td>
