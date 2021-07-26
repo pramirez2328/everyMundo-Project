@@ -1,6 +1,6 @@
 import React from "react";
 import Countries from "./countries";
-import { countries } from "../listOfCountries";
+import { countries } from "../arrayOfCountries";
 
 class Home extends React.Component {
   constructor(props) {

@@ -1,13 +1,27 @@
 import React from "react";
-import Main from "./Main.jsx";
-import NavBar from "./NavBar.jsx";
-
+import ListOfCountries from "./components/listOfCountries.jsx";
+import NavBar from "./components/NavBar.jsx";
+import Show from "./components/show.jsx";
 class App extends React.Component {
   render() {
     return (
-      <div className="container">
-        <NavBar />
-        <Main />
+      <div style={{ position: "relative" }}>
+        <div
+          className="mt-5 me-5"
+          style={{ position: "sticky", top: "700px", float: "right" }}
+        >
+          <a className="top-link hide" href="#top">
+            <span>Back to top</span>
+          </a>
+        </div>
+        <div className="container" id="container">
+          <div className="sticky-top mb-3" style={{ backgroundColor: "white" }}>
+            <NavBar />
+            <Show />
+          </div>
+
+          <ListOfCountries />
+        </div>
       </div>
     );
   }
