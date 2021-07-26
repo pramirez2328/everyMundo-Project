@@ -1,6 +1,7 @@
 import React from "react";
 import Countries from "./countries";
 import CreateNewCountry from "./createNewCountry";
+import Customize from "./customize";
 import { countries } from "../utilities/arrayOfCountries";
 
 class ListOfCountries extends React.Component {
@@ -14,6 +15,11 @@ class ListOfCountries extends React.Component {
     this.handleFormat = this.handleFormat.bind(this);
     this.handleCreate = this.handleCreate.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.handleCustomize = this.handleCustomize.bind(this);
+  }
+
+  handleCustomize(usd, eur, cents, format) {
+    console.log(usd, eur, cents, format);
   }
 
   handleUpdate(id, country, currency, code, symbol) {
@@ -67,6 +73,7 @@ class ListOfCountries extends React.Component {
           objOfCountries={this.state.obj}
           create={this.handleCreate}
         />
+        <Customize />
         <div className="container">
           <table className="table table-striped table-hover">
             <thead>
@@ -75,7 +82,8 @@ class ListOfCountries extends React.Component {
                 <th scope="col">Currency</th>
                 <th scope="col">Code</th>
                 <th scope="col">Symbol</th>
-                <th scope="col">Display</th>
+                <th scope="col">EUR Market</th>
+                <th scope="col">USD Market</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
               </tr>

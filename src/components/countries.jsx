@@ -13,7 +13,7 @@ function Countries(props) {
             <td>
               {currentCountry.contry}
               <button type="button" className="btn btn-primary">
-                Show
+                SHOW
               </button>
             </td>
             <td>

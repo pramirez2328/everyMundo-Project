@@ -15,8 +15,8 @@ class App extends React.Component {
           </a>
         </div>
         <div className="container" id="container">
+          <NavBar />
           <div className="sticky-top mb-3" style={{ backgroundColor: "white" }}>
-            <NavBar />
             <Show />
           </div>
 
