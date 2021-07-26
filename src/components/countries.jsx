@@ -11,6 +11,7 @@ function Countries(props) {
             <td>{currentCountry.code}</td>
             <td>{currentCountry.symbol}</td>
             <td>
+<<<<<<< HEAD:src/components/countries.jsx
               <button
                 type="button"
                 className="btn btn-primary"
@@ -20,6 +21,14 @@ function Countries(props) {
               >
                 Show
               </button>
+=======
+              <Link to="./show.jsx">
+                {currentCountry.contry}
+                <button type="button" className="btn btn-primary">
+                  Show
+                </button>
+              </Link>
+>>>>>>> main:src/pages/countries.jsx
             </td>
             <td>
               <button type="button" className="btn btn-warning">
