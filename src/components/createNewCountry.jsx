@@ -2,38 +2,42 @@ import React from "react";
 
 function CreateNewCountry() {
   return (
-    <div className="mb-3 border p-3 border-secondary rounded">
+    <div className="mb-3 border p-3 border-secondary rounded sticky">
       <form>
-        <div className="d-flex justify-content-around">
+        <div className="d-flex justify-content-between">
           <h4>Create a new country</h4>
           <input
             id="country"
             type="text"
-            classname="form-control"
+            className="form-control"
             placeholder="enter country"
+            style={{ width: "17%" }}
             required
           />
           <input
             id="currency"
             type="text"
-            classname="form-control"
+            className="form-control"
             placeholder="enter currency"
+            style={{ width: "17%" }}
             required
           />
           <input
             id="code"
             type="text"
-            classname="form-control"
+            className="form-control"
             placeholder="enter code"
+            style={{ width: "17%" }}
           />
           <input
             id="symbol"
             type="text"
-            classname="form-control"
+            className="form-control"
             placeholder="enter symbol"
+            style={{ width: "17%" }}
             required
           />
-          <button type="button" class="btn btn-success">
+          <button type="button" className="btn btn-success">
             ADD COUNTRY
           </button>
         </div>

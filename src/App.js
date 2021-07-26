@@ -2,19 +2,26 @@ import React from "react";
 import ListOfCountries from "./components/listOfCountries.jsx";
 import NavBar from "./components/NavBar.jsx";
 import Show from "./components/show.jsx";
-import CreateNewCountry from "./components/createNewCountry.jsx";
-
 class App extends React.Component {
   render() {
     return (
-      <div className="container" id="container">
-        <div className="sticky-top mb-3" style={{ backgroundColor: "white" }}>
-          <NavBar />
-          <Show />
-          <CreateNewCountry />
+      <div style={{ position: "relative" }}>
+        <div
+          className="mt-5 me-5"
+          style={{ position: "sticky", top: "700px", float: "right" }}
+        >
+          <a className="top-link hide" href="#top">
+            <span>Back to top</span>
+          </a>
         </div>
+        <div className="container" id="container">
+          <div className="sticky-top mb-3" style={{ backgroundColor: "white" }}>
+            <NavBar />
+            <Show />
+          </div>
 
-        <ListOfCountries />
+          <ListOfCountries />
+        </div>
       </div>
     );
   }
