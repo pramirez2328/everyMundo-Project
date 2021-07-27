@@ -2,16 +2,28 @@ import React from "react";
 import Countries from "./countries";
 import CreateNewCountry from "./createNewCountry";
 import Customize from "./customize";
-import { countries } from "../utilities/arrayOfCountries";
+import { worldCountries } from "../utilities/arrayOfCountries";
 
 // sort array by ascending order
-countries.sort((a, b) => a.country.localeCompare(b.country));
+worldCountries.sort(function (a, b) {
+  var countryA = a.country.toUpperCase(); // ignore upper and lowercase
+  var countryB = b.country.toUpperCase(); // ignore upper and lowercase
+  if (countryA < countryB) {
+    return -1;
+  }
+  if (countryA > countryB) {
+    return 1;
+  }
+
+  // names must be equal
+  return 0;
+});
 
 class ListOfCountries extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      obj: countries,
+      obj: worldCountries,
     };
 
     this.handleDelete = this.handleDelete.bind(this);

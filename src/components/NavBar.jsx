@@ -1,11 +1,11 @@
 import React from "react";
 import everymundo from "../images/everymundo.png";
 import DownloadButton from "../components/downloadButton";
-import { countries } from "../utilities/arrayOfCountries";
+import { worldCountries } from "../utilities/arrayOfCountries";
 const Papa = require("papaparse");
-console.log(countries);
+
 function download_csv() {
-  const myJSON = JSON.stringify(countries);
+  const myJSON = JSON.stringify(worldCountries);
   let csvFile = Papa.unparse(myJSON);
   const blob = new Blob([csvFile]);
   const a = document.createElement("a");
@@ -16,8 +16,8 @@ function download_csv() {
   document.body.removeChild(a);
 }
 
-//If the user clicks in the image, it redirects to everymundo website
-//button to download files as a csv file
+// If the user clicks in the image, it redirects to everymundo website
+// button to download files as a csv file
 function NavBar() {
   return (
     <>

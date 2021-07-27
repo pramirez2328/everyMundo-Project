@@ -1,4 +1,4 @@
-export const countries = [
+export const worldCountries = [
   {
     id: 0,
     country: "Afghanistan",
@@ -1242,7 +1242,13 @@ export const countries = [
     code: "BRL",
     symbol: "R$",
   },
-  { id: 181, country: "Chile	Chilean Peso", code: "CLP", symbol: "$" },
+  {
+    id: 181,
+    country: "Chile",
+    currency: "Chilean Peso",
+    code: "CLP",
+    symbol: "$",
+  },
   {
     id: 182,
     country: "Colombia",
@@ -1257,7 +1263,13 @@ export const countries = [
     code: "USD",
     symbol: "$",
   },
-  { id: 184, country: "Guyana	Guyanese Dollar", code: "GYD", symbol: "$" },
+  {
+    id: 184,
+    country: "Guyana",
+    currency: "Guyanese Dollar",
+    code: "GYD",
+    symbol: "$",
+  },
   {
     id: 185,
     country: "Paraguay",
