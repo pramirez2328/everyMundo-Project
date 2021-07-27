@@ -2,10 +2,18 @@ import React from "react";
 import everymundo from "../images/everymundo.png";
 import DownloadButton from "../components/downloadButton";
 import { countries } from "../utilities/arrayOfCountries";
+const Papa = require("papaparse");
 
 function download_csv() {
   const myJSON = JSON.stringify(countries);
-  console.log(myJSON);
+  let csvFile = Papa.unparse(myJSON);
+  const blob = new Blob([csvFile]);
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob, { type: "text/plain" });
+  a.download = "CSV Export File";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 }
 
 //If the user clicks in the image, it redirects to everymundo website
