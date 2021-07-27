@@ -4,6 +4,8 @@ import CreateNewCountry from "./createNewCountry";
 import Customize from "./customize";
 import { countries } from "../utilities/arrayOfCountries";
 
+countries.sort((a, b) => a.country.localeCompare(b.country));
+
 class ListOfCountries extends React.Component {
   constructor(props) {
     super(props);
@@ -48,9 +50,63 @@ class ListOfCountries extends React.Component {
   }
 
   handleCustomize(code, symbol) {
+    let showCode = document.getElementById("showCode").checked;
+    let showSymbol = document.getElementById("showSymbol").checked;
+    let showCents = document.getElementById("showCents").checked;
+    let codeBPrice = document.getElementById("codeBPrice").checked;
+    let symbolBPrice = document.getElementById("symbolBPrice").checked;
+    let dot = document.getElementById("dot").checked;
+    let amount = document.getElementById("amount").value;
+
+    let result = amount.split("");
+    let index = result.findIndex((i) => i === ".");
+    if (index === -1)
+      alert(
+        "Enter the amount in the right format example: 1234.56 if no cents, type 00 after the dot"
+      );
+    if (dot) {
+      result[index] = ",";
+      for (let i = index - 3; i > 0; i = i - 3) {
+        result.splice(i, 0, ".");
+      }
+    } else {
+      for (let i = index - 3; i > 0; i = i - 3) {
+        result.splice(i, 0, ",");
+      }
+    }
+
+    if (!showCents) {
+      let i = result.findIndex((i) => i === ".");
+      result.splice(i);
+    }
+
+    if (showSymbol) {
+      if (symbolBPrice) {
+        result.unshift(symbol);
+      } else {
+        result.push(symbol);
+      }
+    }
+
+    if (showCode) {
+      if (codeBPrice) {
+        result.unshift(code);
+      } else {
+        result.push(code);
+      }
+    }
+
+    let finalResult = "";
+
+    for (let i = 0; i < result.length; i++) {
+      finalResult += result[i];
+    }
+
     let currencyTag = document.getElementsByClassName("currencyFormat");
 
-    for (let i = 0; i < currencyTag.length; i++) {}
+    for (let i = 0; i < currencyTag.length; i++) {
+      currencyTag[i].textContent = finalResult;
+    }
   }
 
   handleDelete(id) {
