@@ -1,6 +1,12 @@
 import React from "react";
 import everymundo from "../images/everymundo.png";
 import DownloadButton from "../components/downloadButton";
+import { countries } from "../utilities/arrayOfCountries";
+
+function download_csv() {
+  const myJSON = JSON.stringify(countries);
+  console.log(myJSON);
+}
 
 //If the user clicks in the image, it redirects to everymundo website
 //button to download files as a csv file
@@ -22,7 +28,7 @@ function NavBar() {
           </span>{" "}
           CURRENCY FORMAT
         </h3>
-        <DownloadButton />
+        <DownloadButton download={download_csv} />
       </nav>
     </>
   );
