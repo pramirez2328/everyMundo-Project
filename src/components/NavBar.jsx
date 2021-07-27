@@ -3,7 +3,7 @@ import everymundo from "../images/everymundo.png";
 import DownloadButton from "../components/downloadButton";
 import { countries } from "../utilities/arrayOfCountries";
 const Papa = require("papaparse");
-
+console.log(countries);
 function download_csv() {
   const myJSON = JSON.stringify(countries);
   let csvFile = Papa.unparse(myJSON);

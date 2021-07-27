@@ -1,4 +1,4 @@
-export const countries = [
+export let countries = [
   {
     id: 1,
     country: "Afghanistan",
@@ -1242,12 +1242,18 @@ export const countries = [
     code: "BRL",
     symbol: "R$",
   },
-
   {
     id: 183,
     country: "Colombia",
     currency: "Colombian Peso",
     code: "COP",
+    symbol: "$",
+  },
+  {
+    id: 182,
+    country: "Chile",
+    currency: "Peso",
+    code: "CLP",
     symbol: "$",
   },
   {
@@ -1260,7 +1266,7 @@ export const countries = [
   {
     id: 185,
     country: "Guyana",
-    currency: "Dollar(Guyanese)",
+    currency: "Dollar",
     code: "GYD",
     symbol: "$",
   },
