@@ -1,5 +1,8 @@
 import React from "react";
 
+// component to get users values
+// mostly checkboxes and an input to get the value
+// all checkboxes return booleans
 function Customize() {
   return (
     <div>

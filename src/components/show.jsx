@@ -3,6 +3,7 @@ import americanAirlines from "../images/American.jpg";
 import unitedAirlines from "../images/United.jpg";
 import emirates from "../images/Emirates-Symbol.png";
 
+//3 cards to display result
 function Show() {
   return (
     <div className="d-flex justify-content-between text-center mb-3">

@@ -1,5 +1,7 @@
 import React from "react";
 
+//component with 3 buttons, delete, update, and customize!
+//props recieve 3 functions from parent component
 function Countries(props) {
   return (
     <tbody>

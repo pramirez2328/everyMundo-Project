@@ -1,5 +1,9 @@
 import React from "react";
 
+// component to create a new object
+// inputs an a bottom
+// props: array of objects and function
+
 function CreateNewCountry(props) {
   return (
     <div className="mb-3 border p-3 border-secondary rounded sticky">

@@ -2,6 +2,8 @@ import React from "react";
 import everymundo from "../images/everymundo.png";
 import DownloadButton from "../components/downloadButton";
 
+//If the user clicks in the image, it redirects to everymundo website
+//button to download files as a csv file
 function NavBar() {
   return (
     <>
