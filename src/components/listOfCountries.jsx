@@ -102,14 +102,26 @@ class ListOfCountries extends React.Component {
 
     //conditional to add dots every 3 digits, example 1.2345,00
     if (dot) {
-      result[index] = ",";
-      for (let i = index - 3; i > 0; i = i - 3) {
-        result.splice(i, 0, ".");
+      if (result[index] === undefined) {
+        for (let i = index - 3; i > 0; i = i - 3) {
+          result.splice(i, 0, ".");
+        }
+      } else {
+        result[index] = ",";
+        for (let i = index - 3; i > 0; i = i - 3) {
+          result.splice(i, 0, ".");
+        }
       }
     } else {
-      // if not dot then commas will be used
-      for (let i = index - 3; i > 0; i = i - 3) {
-        result.splice(i, 0, ",");
+      if (result[index] === undefined) {
+        for (let i = index - 3; i > 0; i = i - 3) {
+          result.splice(i, 0, ",");
+        }
+      } else {
+        result[index] = ".";
+        for (let i = index - 3; i > 0; i = i - 3) {
+          result.splice(i, 0, ",");
+        }
       }
     }
 

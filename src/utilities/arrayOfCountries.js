@@ -1,12 +1,5 @@
 export const worldCountries = [
   {
-    id: 0,
-    country: "Afghanistan",
-    currency: "Afghanistani Afghani",
-    code: "AFN",
-    symbol: "؋",
-  },
-  {
     id: 1,
     country: "Armenia",
     currency: "Armenian Dram",
@@ -336,13 +329,6 @@ export const worldCountries = [
     currency: "Yemeni Rial",
     code: "YER",
     symbol: "﷼",
-  },
-  {
-    id: 50,
-    country: "Algeria",
-    currency: "Algerian Dinar",
-    code: "DZD",
-    symbol: "دج",
   },
   {
     id: 51,
