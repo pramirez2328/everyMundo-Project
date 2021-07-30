@@ -6,16 +6,14 @@ import { worldCountries } from "../utilities/arrayOfCountries";
 
 // sort array by ascending order
 worldCountries.sort(function (a, b) {
-  var countryA = a.country.toUpperCase(); // ignore upper and lowercase
-  var countryB = b.country.toUpperCase(); // ignore upper and lowercase
+  var countryA = a.country.toUpperCase();
+  var countryB = b.country.toUpperCase();
   if (countryA < countryB) {
     return -1;
   }
   if (countryA > countryB) {
     return 1;
   }
-
-  // names must be equal
   return 0;
 });
 
